@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+</head>
+<body>
+    <script>
+
+        function makePromise(){
+            return new Promise(function(resolve,reject){
+                if(Math.random() < 0.5){
+                    resolve()
+                }else{
+                    reject()
+                }
+            })
+        }
+
+        makePromise()
+            .then(()=>{
+                console.log('成功1')
+            },()=>{
+                console.log('失败1')
+            })
+            .then(()=>{
+                console.log('成功2')
+            },()=>{
+                console.log('失败2')
+            })
+
+    </script>
+</body>
+</html>
