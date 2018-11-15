@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="./jquery.js"></script>
 </head>
 <body>
     <script>
@@ -24,9 +23,13 @@
 
         makePromise()
             .then(()=>{
+                console.log('成功0')                
                 a = 2
+                console.log('成功1')
             },()=>{
+                console.log('失败0')
                 a = 2
+                console.log('失败1')
             })
             .then(()=>{
                 console.log('成功2')
